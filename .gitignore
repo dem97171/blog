@@ -1,0 +1,9 @@
+_site
+.sass-cache
+.jekyll-metadata
+
+# Ignore bundler gems.
+vendor/bundle
+
+# Ignore jekyll compiled directory.
+_site
