@@ -1,0 +1,44 @@
+$width: 1080px;
+$side-width: 360px;
+// $sidebar-color: #eec196;
+
+#l-header{
+    width: 100%;
+    // background-color: #d18e8e;
+    .l-header-wrapper{
+        max-width: $width;
+        margin: 0px auto;
+    }
+}
+
+#l-main{
+    width: 100%;
+    // background-color: #b7d1b5;
+    .l-main-wrapper{
+
+        position: relative;
+        max-width: $width;
+        margin: 0px auto;
+        padding: 20px 10px;
+        .l-main-content{
+            // width: 100%;
+            max-width: $width - $side-width;
+            // border-right: solid $side-width $sidebar-color;
+        }
+        .l-main-sidebar{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: $side-width;
+        } 
+    }
+}
+
+#l-footer{
+    width: 100%;
+    background-color: #97a4c2;
+}
+
+.l-section{
+    margin-right: 40px;
+}
