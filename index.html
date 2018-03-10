@@ -1,19 +1,12 @@
 ---
 layout: default
-title: pagetitle
 ---
 
 <div class="home">
-    <!-- {% if page.title %}
-        <h1 class="page-heading">{{ page.title }}</h1>
-    {% endif %} -->
-
-    <!-- {{ content }} -->
-
     {% if site.posts.size > 0 %}
-        <!-- <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2> -->
+        <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
         <section class="l-section">
-            {% for post in site.posts %}
+            {% for post in paginator.posts %}
             <!-- <div class="l-post_item"> -->
                 <article class="post_item-wrapper">
                     <div class="post_item-date">
@@ -31,8 +24,18 @@ title: pagetitle
             
             {% endfor %}
         </section>
+        <div class="pagination">
+            {% if paginator.previous_page %}
+                <a href="{{ paginator.previous_page_path | prepend: site.baseurl}}" class="previous">&laquo; Previous</a>
+            {% endif %}
+        
+            <span class="page_number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+        
+            {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path | prepend: site.baseurl}}" class="next">Next &raquo;</a>
+            {% endif %}
+        </div>
 
         <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
     {% endif %}
-
 </div>
