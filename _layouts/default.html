@@ -3,10 +3,12 @@
     {% include head.html %}
     <body>
         {% include header.html %}
-        <main id="l-main" aria-label="Content">
+        <main class="l-main" aria-label="Content">
             <div class="l-main-wrapper">
                 <div class="l-main-content">
-                    {{ content }}
+                    <div class="l-main-content_wrapper content">
+                        {{ content }}
+                    </div>
                 </div>
                 <div class="l-main-sidebar">
                     main sidebar

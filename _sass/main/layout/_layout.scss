@@ -2,16 +2,17 @@ $width: 1080px;
 $side-width: 360px;
 // $sidebar-color: #eec196;
 
-#l-header{
+.l-header{
     width: 100%;
     // background-color: #d18e8e;
     .l-header-wrapper{
         max-width: $width;
+        padding: 0px 10px;
         margin: 0px auto;
     }
 }
 
-#l-main{
+.l-main{
     width: 100%;
     // background-color: #b7d1b5;
     .l-main-wrapper{
@@ -19,11 +20,14 @@ $side-width: 360px;
         position: relative;
         max-width: $width;
         margin: 0px auto;
-        padding: 20px 10px;
+        padding: 10px 10px;
         .l-main-content{
             // width: 100%;
             max-width: $width - $side-width;
             // border-right: solid $side-width $sidebar-color;
+            .l-main-content_wrapper{
+                margin-right: 10px;
+            }
         }
         .l-main-sidebar{
             position: absolute;
@@ -34,11 +38,10 @@ $side-width: 360px;
     }
 }
 
-#l-footer{
+.l-footer{
     width: 100%;
-    background-color: #97a4c2;
-}
-
-.l-section{
-    margin-right: 40px;
+    .l-footer-wrapper{
+        max-width: $width;
+        margin: 0px auto;
+    }
 }

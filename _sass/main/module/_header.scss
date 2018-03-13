@@ -1,4 +1,13 @@
 .header{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #000000;
+    &:after{
+        content: "";
+        display: block;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #000000;
+    }
     a{
         &.header-site_title{
             color: #333;

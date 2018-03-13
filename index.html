@@ -4,8 +4,8 @@ layout: default
 
 <div class="home">
     {% if site.posts.size > 0 %}
-        <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-        <section class="l-section">
+        <!-- <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2> -->
+        <section>
             {% for post in paginator.posts %}
             <!-- <div class="l-post_item"> -->
                 <article class="post_item-wrapper">
