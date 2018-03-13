@@ -16,8 +16,9 @@ $side-width: 360px;
     width: 100%;
     // background-color: #b7d1b5;
     .l-main-wrapper{
-
-        position: relative;
+        // position: relative;
+        // overflow: hidden;
+        display: flex;
         max-width: $width;
         margin: 0px auto;
         padding: 10px 10px;
@@ -30,9 +31,9 @@ $side-width: 360px;
             }
         }
         .l-main-sidebar{
-            position: absolute;
-            top: 0px;
-            right: 0px;
+            // position: absolute;
+            // top: 0px;
+            // right: 0px;
             width: $side-width;
         } 
     }
