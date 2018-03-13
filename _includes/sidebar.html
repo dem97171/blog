@@ -1,0 +1,41 @@
+<h2>Archives</h2>
+<ul>
+    {% assign counter = 0 %}
+    {% for post in site.posts %}
+        {% assign thisyear = post.date | date: "%Y/%m" %}
+        {% assign prevyear = post.previous.date | date: "%Y/%m" %}
+        {% assign counter = counter | plus: 1 %}
+        {% if thisyear != prevyear %}
+            <li><a href="/archive/#{{ post.date | date:"%m %Y" }}">{{ thisyear }} ({{ counter }})</a></li>
+            {% assign counter = 0 %}
+        {% endif %}
+    {% endfor %}
+</ul>
+
+
+<h2>Recent Posts</h2>
+{% for post in site.posts limit:6 %}
+    <li>
+        <span class="post-date">{{ post.date | date_to_string }} &raquo;</span>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+    </li>
+{% endfor %}
+</ul>
+
+
+<h2>categories</h2>
+{% for category in site.categories %}
+    {% capture name %}{{ category[0] }}{% endcapture %}
+    <li>
+        <a href="">{{ name }} ({{ site.categories[name] | size }})</a>
+    </li>
+{% endfor %}
+
+
+<h2>tags</h2>
+{% for tag in site.tags %}
+  {% capture name %}{{ tag[0] }}{% endcapture %}
+  <li>
+      <a href="">{{ name }} ({{ site.tags[name] | size }})</a>
+  </li>
+{% endfor %}
