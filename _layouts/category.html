@@ -2,10 +2,11 @@
 layout: default
 ---
 
-{% if site.posts.size > 0 %}
-    <!-- <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2> -->
+<div class="blog list">
+    <h1>Filed Under <small>#{{ page.tag }}</small></h1>
+
     <section class="post_list">
-        {% for post in paginator.posts %}
+        {% for post in site.categories[page.tag] %}
             <article class="post_list-item">
                 <div class="post_list-item_date">
                     {% assign date_format = site.minima.date_format | default: "%Y/%-m/%-d" %}
@@ -21,17 +22,4 @@ layout: default
             </article>
         {% endfor %}
     </section>
-    <div class="pagination">
-        {% if paginator.previous_page %}
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl}}" class="previous">&lt;</a>
-        {% endif %}
-    
-        <span class="page_number">Page: {{ paginator.page }} / {{ paginator.total_pages }}</span>
-    
-        {% if paginator.next_page %}
-            <a href="{{ paginator.next_page_path | prepend: site.baseurl}}" class="next">&gt;</a>
-        {% endif %}
-    </div>
-
-    <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
-{% endif %}
+</div>

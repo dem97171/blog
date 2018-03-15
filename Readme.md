@@ -1,4 +1,5 @@
-https://dem97171.github.io/techblog.github.io/
+## access
+https://dem97171.github.io/blog/
 
 ## reference
 GitHub Help - Adding a Jekyll theme to your GitHub Pages site  
@@ -10,6 +11,9 @@ https://pages.github.com/versions/
 ## dev command
 ### start local web server for dev.
 `bundle exec jekyll serve`
+
+## start local web server for dev, with live-reload plugin.
+`bundle exec jekyll liveserve`
 
 ### jekyll build only.
 `bundle exec jekyll build`
