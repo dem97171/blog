@@ -27,6 +27,7 @@ repository: dem97171.github.io/blog
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 theme: minima
 plugins:
   - jekyll-feed
