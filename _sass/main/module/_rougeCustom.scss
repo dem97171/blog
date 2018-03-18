@@ -1,0 +1,13 @@
+// inline highlight include backquote.
+// sample : this is a `pen`.
+code{
+    &.highlighter-rouge{
+        margin: 0px 2px;
+        padding: 1px 4px;
+        background-color: #f0f0f0;
+        border: 1px solid #d8d8d8;
+        border-radius: 3px;
+        font-size: 0.95em;
+        color: #e65757;
+    }
+}
