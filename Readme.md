@@ -22,4 +22,4 @@ https://github.com/jneen/rouge
 `bundle exec jekyll build`
 
 ### output rouge syntax highlight css file.
-$ bundle exec rougify style molokai > assets/rouge.css
+`$ bundle exec rougify style molokai > assets/rouge.css`
