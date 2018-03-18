@@ -1,20 +1,24 @@
-<h2>Profile</h2>
+<section class="sidebar">
+    {% include sidebarProfile.html %}
 
+    <section class="sidebar-block">
+        <h2>Recent Posts</h2>
+        {% for post in site.posts limit:6 %}
+            <li>
+                <span class="post-date">{{ post.date | date_to_string }} &raquo;</span>
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </li>
+        {% endfor %}
+        </ul>
+    </section>
 
-<h2>Recent Posts</h2>
-{% for post in site.posts limit:6 %}
-    <li>
-        <span class="post-date">{{ post.date | date_to_string }} &raquo;</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-    </li>
-{% endfor %}
-</ul>
-
-
-<h2>categories</h2>
-{% for category in site.categories %}
-    {% capture name %}{{ category[0] }}{% endcapture %}
-    <li>
-        <a href="{{ site.baseurl }}/category/{{ name }}">{{ name }} ({{ site.categories[name] | size }})</a>
-    </li>
-{% endfor %}
+    <section class="sidebar-block">
+        <h2>categories</h2>
+        {% for category in site.categories %}
+            {% capture name %}{{ category[0] }}{% endcapture %}
+            <li>
+                <a href="{{ site.baseurl }}/category/{{ name }}">{{ name }} ({{ site.categories[name] | size }})</a>
+            </li>
+        {% endfor %}
+    </section>
+</section>

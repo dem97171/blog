@@ -1,0 +1,29 @@
+.sidebar{
+    .sidebar-block{
+        .sidebar-block_title{
+            border-left: 10px solid #000000;
+            padding-left: 1rem;
+        }
+        .sidebar-block_content{
+            margin-left: 20px;
+            .sidebar-profile_description{
+                display: block;
+                margin-bottom: 10px;
+            }
+            .sidebar-profile_icon{
+                display: block;
+                width: 220px;
+                height: 220px;
+                margin-bottom: 10px;
+            }
+            .sidebar-profile_social_link_wrapper{
+                .sidebar-profile_social_icon{
+                    margin-right: 10px;
+                }
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

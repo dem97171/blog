@@ -1,0 +1,21 @@
+.social_icon-twitter{
+    &:hover{
+        svg{
+            #icon-twitter{
+                circle{
+                    fill: #55ACEE;
+                }
+            }
+        }
+    }
+}
+
+.social_icon-github{
+    &:hover{
+        svg{
+            #icon-github{
+                fill: #8E8E8E;
+            }
+        }
+    }
+}
