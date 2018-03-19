@@ -1,0 +1,24 @@
+// post content
+.post{
+    .post-header{
+        padding: 15px 15px;
+        margin-bottom: 30px;
+        border-top: 4px solid #000000;
+        border-bottom: 4px solid #000000;
+        .post-meta{
+            margin: 0px;
+            text-align: right;
+        }
+    }
+    .post-content{
+        padding: 0px 15px;
+        margin-bottom: 60px;
+        h2{
+            padding: 15px 0px;
+            margin-top: 60px;
+            font-size: 1.3rem;
+            border-top: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+        }
+    }
+}

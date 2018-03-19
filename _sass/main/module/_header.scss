@@ -1,12 +1,12 @@
 .header{
-    padding-bottom: 10px;
+    padding-bottom: 6px;
     margin-bottom: 10px;
-    border-bottom: 1px solid #000000;
+    border-bottom: 2px solid #000000;
     &:after{
         content: "";
         display: block;
         padding-bottom: 10px;
-        border-bottom: 1px solid #000000;
+        border-bottom: 2px solid #000000;
     }
     a{
         &.header-site_title{
