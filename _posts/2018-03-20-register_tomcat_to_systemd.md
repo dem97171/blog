@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "tomcatをsystemdに登録する手順"
-date:   2018-03-30 10:30:00 +0900
+date:   2018-03-20 10:30:00 +0900
 categories: CentOS systemd tomcat
 ---
-# 概要
+## 概要
 apache-tomcat公式のtar.gzをダウンロードしてCentOS7のsystemdに登録する手順。
 
 `systemctl restart tomcat` コマンドが正常に実行できるようにする。
@@ -13,22 +13,25 @@ apache-tomcat公式のtar.gzをダウンロードしてCentOS7のsystemdに登�
 * OSはCentOS7で確認。
 * javaのセットアップについては省略。
 
-## tomcatを準備
+## 手順
+### 1.tomcatを準備
 公式サイトからダウンロードした[apache-tomcat.tar.gz](http://ftp.jaist.ac.jp/pub/apache/tomcat/tomcat-8/v8.5.24/bin/apache-tomcat-8.5.24.tar.gz)を適当な場所に設置する。
 自分は`/opt/tomcat`に設置している。
 
-```bash
+```
 # mkdir /opt/tomcat
 # cd /opt/tomcat
 # tar zxvf apache-tomcat-8.5.24.tar.gz
 # ln -s /opt/tomcat/apache-tomcat-8.5.24 latest
 ```
 
+### 2.tomcat用のユーザーを作成
 以下のコマンドを実行してtomcatユーザーを新規作成する。
-```bash
+```
 # useradd -s /sbin/nologin tomcat
 ```
 
+### 3.systemdのユニットファイルを作成
 tomcatのユニットファイルを`/etc/systemd/system/tomcat.service`に新規作成する。
 
 ```
@@ -49,7 +52,13 @@ TimeoutSec=90
 WantedBy=multi-user.target
 ```
 
-続いてプロセス終了を監視するようにシャットダウンスクリプトを新規作成する。
+tomcatのユニットファイルを反映させる。
+```
+# systemctl daemon-reload
+```
+
+### 4.tomcatの起動スクリプトを作成
+プロセス終了を監視するようにシャットダウンスクリプトを新規作成する。
 ```bash
 #!/bin/sh
 
@@ -92,15 +101,13 @@ fi
 exit 0    # success
 ```
 
-tomcatのユニットファイルを反映させる。
-```bash
-# systemctl daemon-reload
-```
+以上で準備完了。
 
+### 4.動作確認
 以上でtomcatのsystemd登録は完了。
 以下のコマンドが正常に終了することを確認。
 
-```bash
+```
 # systemctl restart tomcat
 ```
 
