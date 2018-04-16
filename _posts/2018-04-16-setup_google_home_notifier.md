@@ -20,18 +20,18 @@ google homeに任意のテキスト情報をしゃべらせることができる
 
 ## google-home-notifierのインストール
 google-home-notifierには依存パッケージがあるため、yumでインストールしておく。
-```bash
+```
 # yum install avahi-compat-libdns_sd-devel
 ```
 
 google-home-notifierをインストールする。
-```bash
+```
 $ npm init
 $ npm install google-home-notifier --save-dev
 ```
 
 [google-home-notifier](https://github.com/noelportugal/google-home-notifier)のREADME.mdに従い、brower.jsを修正する。
-```bash
+```
 $ vi node_modules/mdns/lib/browser.js
 ```
 
@@ -96,6 +96,6 @@ $ node test.js
 しゃべった。
 
 ## まとめ
-以上でgoogle-home-notifier
+以上でgoogle-home-notifierにしゃべらせることができた。
 
-avahi周りに不備があるようで、google homeのデバイス名でしゃべらせることができない。今回はIPアドレス指定でごまかしたので、修正方法が分かれば追記する。
+ただavahi周りに不備があるようで、google homeのデバイス名でしゃべらせることができない。（Warningが出ている）今回はIPアドレス指定でごまかしたので、修正方法が分かれば追記する。
