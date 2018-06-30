@@ -1,5 +1,5 @@
 ---
 layout: category
 tag: Cordova
-permalink: "/category/cordova"
+permalink: "/category/Cordova"
 ---
