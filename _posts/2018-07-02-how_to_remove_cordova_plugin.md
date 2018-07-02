@@ -20,4 +20,10 @@ cordova plugin rm [プラグイン名]
 
 プラットフォーム丸ごと削除して作り直すのが早い。
 
-でもそしたらネイティブ側に手を加えた分ってどうすんだろ？？？
+## ネイティブ側に手を加えた分の管理
+
+[androidのプロジェクト](https://github.com/apache/cordova-android)をforkしてオリジナルのプラットフォームを作るのが良さそう。
+
+`cordova platform add android` じゃなくて `cordova platform add ../platform_dir_path` とか `cordova platform add https://giturl` とかでplatformを追加できる。
+
+gradleのバージョンとかもそのままだと古くて怒られるし、AndroidStudioも使ってplatformは自分で管理するのがベターな感じかな。
