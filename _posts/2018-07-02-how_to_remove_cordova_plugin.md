@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Cordovaプラグインの消し方"
-date:   2018-07-02 11:30:00 +0900
+date:   2018-07-02 11:31:00 +0900
 categories: Cordova
 ---
 
