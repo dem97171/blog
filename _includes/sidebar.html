@@ -1,13 +1,17 @@
-<section class="sidebar">
-    {% include sidebarProfile.html %}
+<div id="nav-drawer">
+    <input id="nav-input" type="checkbox" class="nav-unshown">
+    <label id="nav-open" for="nav-input"><span></span></label>
+    <label class="nav-unshown" id="nav-close" for="nav-input"></label>
+    <section id="nav-content" class="sidebar">
+        {% include sidebarProfile.html %}
 
-    <section class="sidebar-block">
-        <div class="sidebar-block_title">
-            <h2>Recent Posts</h2>
-        </div>
-        <div class="sidebar-block_content">
-            <section class="post_list">
-                {% for post in site.posts limit:6 %}
+        <section class="sidebar-block">
+            <div class="sidebar-block_title">
+                <h2>Recent Posts</h2>
+            </div>
+            <div class="sidebar-block_content">
+                <section class="post_list">
+                    {% for post in site.posts limit:6 %}
                     <article class="post_list-item">
                         <div class="post_list-item_date">
                             {% assign date_format = site.minima.date_format | default: "%Y/%-m/%-d" %}
@@ -18,25 +22,27 @@
                         </span>
                         <a class="post_list-item_link" href="{{ post.url | relative_url }}"></a>
                     </article>
-                {% endfor %}
-            </section>
-        </div>
-    </section>
+                    {% endfor %}
+                </section>
+            </div>
+        </section>
 
-    <section class="sidebar-block">
-        <div class="sidebar-block_title">
-            <h2>Categories</h2>
-        </div>
-        <div class="sidebar-block_content">
-            <ul class="label">
-                {% assign order_categories = site.categories | category_order: 'count', 'DESC' %}
-                {% for category in order_categories %}
+        <section class="sidebar-block">
+            <div class="sidebar-block_title">
+                <h2>Categories</h2>
+            </div>
+            <div class="sidebar-block_content">
+                <ul class="label">
+                    {% assign order_categories = site.categories | category_order: 'count', 'DESC' %}
+                    {% for category in order_categories %}
                     {% capture name %}{{ category[0] }}{% endcapture %}
                     <li class="label-item">
-                        <a href="{{ site.baseurl }}/category/{{ name }}" class="label-item_link">{{ name }} ({{ site.categories[name] | size }})</a>
+                        <a href="{{ site.baseurl }}/category/{{ name }}" class="label-item_link">{{ name }} ({{
+                            site.categories[name] | size }})</a>
                     </li>
-                {% endfor %}
-            </ul>
-        </div>
+                    {% endfor %}
+                </ul>
+            </div>
+        </section>
     </section>
-</section>
+</div>

@@ -13,10 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: メモジトリ
-subTitle: 不毛なページを増やして混沌としたネットの海に貢献
+title: ついていくのがやっとだぜ
+subTitle: 人生ヤムチャ視点
 email: your-email@example.com
-profile: 自称ネットワーク系エンジニア。<br>一眼レフはやっぱり重くて持てなかったので2代目もミラーレス一眼を買いました。
+profile: 自称ネットワーク系エンジニア。<br>PHP, HTML, JavaScript, Gulp, Node.js, RHEL, CentOS, Android, Jenkins, Redmine, Ansible, Docker あたりを触ります。クラウドよりもオンプレインフラに触れる機会が多いです。<br>UTPケーブルの端子を取り付けるのが得意です。
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
