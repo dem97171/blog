@@ -1,13 +1,8 @@
 .header{
+    background-color: #ffffff;
     padding-bottom: 6px;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #000000;
-    &:after{
-        content: "";
-        display: block;
-        padding-bottom: 10px;
-        border-bottom: 2px solid #000000;
-    }
+    // margin-bottom: 10px;
+    box-shadow: 0px 1px 8px 1px rgba(0,0,0,0.54);
     .header-site_title{
         vertical-align: bottom;
     }
