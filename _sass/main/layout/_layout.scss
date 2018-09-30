@@ -9,12 +9,13 @@ $side-width: 360px;
         max-width: $width;
         padding: 0px 10px;
         margin: 0px auto;
+        text-align: center;
     }
 }
 
 .l-main{
     width: 100%;
-    // background-color: #b7d1b5;
+    background-color: #b7d1b5;
     .l-main-wrapper{
         // position: relative;
         // overflow: hidden;
