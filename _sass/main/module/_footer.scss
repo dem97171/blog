@@ -1,13 +1,7 @@
 .footer{
-    background-color: #ffffff;
-    border-top: 2px solid #000000;
+    background-color: #313131;
+    color: #ffffff;
     padding-top: 6px;
-    &:before{
-        content: "";
-        display: block;
-        padding-bottom: 10px;
-        border-top: 2px solid #000000;
-    }
     .footer-copyright{
         font-size: 0.7rem;
         text-align: center;
