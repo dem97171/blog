@@ -1,15 +1,16 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="post content" itemscope itemtype="http://schema.org/BlogPosting">
     <header class="post-header">
         <p class="post-meta">
             <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-                    {% assign date_format = site.minima.date_format | default: "%Y/%-m/%-d" %}
-                    <span class="post_list-item_meta">{{ page.date | date: date_format }}</span>
+                {% assign date_format = site.minima.date_format | default: "%Y/%-m/%-d" %}
+                <span class="post_list-item_meta">{{ page.date | date: date_format }}</span>
             </time>
             {% if page.author %}
-                • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card"
+                    itemprop="name">{{ page.author }}</span></span>
             {% endif %}
         </p>
         <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
@@ -20,7 +21,7 @@ layout: default
     </div>
 
     {% if site.disqus.shortname %}
-        {% include disqus_comments.html %}
+    {% include disqus_comments.html %}
     {% endif %}
 
     <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>

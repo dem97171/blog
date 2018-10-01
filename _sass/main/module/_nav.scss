@@ -1,10 +1,10 @@
-@media screen and (min-width: 1201px) {
+@media screen and (min-width: 1340px) {
     #nav-input{
         display: none;
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1340px) {
     #nav-drawer {
         position: relative;
     }
@@ -20,12 +20,12 @@
         top: -30px;
         right: 0px;
         display: inline-block;
-        width: 30px;
+        width: 40px;
         height: 22px;
         vertical-align: middle;
         span{
             position: absolute;
-            height: 3px;/*線の太さ*/
+            height: 0.2rem;/*線の太さ*/
             width: 25px;/*長さ*/
             border-radius: 3px;
             background: #555;
@@ -35,7 +35,7 @@
             &:before{
                 bottom: -8px;
                 position: absolute;
-                height: 3px;/*線の太さ*/
+                height: 0.2rem;/*線の太さ*/
                 width: 25px;/*長さ*/
                 border-radius: 3px;
                 background: #555;
@@ -46,7 +46,7 @@
             &:after{
                 bottom: -16px;
                 position: absolute;
-                height: 3px;/*線の太さ*/
+                height: 0.2rem;/*線の太さ*/
                 width: 25px;/*長さ*/
                 border-radius: 3px;
                 background: #555;
