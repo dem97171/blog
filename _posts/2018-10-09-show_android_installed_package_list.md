@@ -131,3 +131,19 @@ package:com.android.captiveportallogin
 package:com.android.widgetpreview
 package:com.google.android.inputmethod.latin
 ```
+
+### バックアップとリストア
+ちなみにバックアップは
+
+```bash
+adb backup -apk -f [filename] [package name]
+```
+でカレントディレクトリにバックアップファイルが生成される。
+
+バックアップ作成時にパスワードを設定することもできる。
+
+リストアは
+
+```bash
+adb restore [package name]
+```
