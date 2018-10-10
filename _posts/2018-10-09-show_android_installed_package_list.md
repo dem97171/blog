@@ -2,7 +2,7 @@
 layout: post
 title:  "adbコマンドでAndroidデバイスにインストールされているアプリを一覧表示する。"
 date:   2018-10-09 16:51:00 +0900
-categories: Android
+categories: android
 ---
 
 ## AndroidStudioのadbにパスが通った状態で
