@@ -7,7 +7,7 @@ categories: android
 
 # GCMのAPIキーがvalidかどうかを確認する。
 
-[Implementing an HTTP Connection Server  |  Cloud Messaging  |  Google Developers](https://developers.google.com/cloud-messaging/http#checkAPIkey)
+[Implementing an HTTP Connection Server](https://developers.google.com/cloud-messaging/http#checkAPIkey)
 
 確認用のシェルスクリプトを作成する。
 
