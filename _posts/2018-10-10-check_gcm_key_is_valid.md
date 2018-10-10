@@ -25,3 +25,5 @@ curl --header "Authorization: key=$server_key" \
 server_keyに取得したAPIKeyをセットして実行。
 
 status code 200 が返ってくれば正常。（registration_idsが適当でも200でfalseの結果が返る。）
+
+server_key が間違っている場合は認証エラーで 401 が返る。
