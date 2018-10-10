@@ -11,7 +11,7 @@ categories: android
 
 確認用のシェルスクリプトを作成する。
 
-```bash:cehckGcmKeyValid.sh
+```bash
 #!/bin/sh
 server_key=AndroidGCMAPIKey
 curl --header "Authorization: key=$server_key" \
