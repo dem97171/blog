@@ -17,7 +17,7 @@
     // ハンバーガーアイコンをCSSで表現
     #nav-open {
         position: absolute;
-        top: -30px;
+        top: -50px;
         right: 0px;
         display: inline-block;
         width: 40px;
@@ -25,7 +25,7 @@
         vertical-align: middle;
         span{
             position: absolute;
-            height: 0.2rem;/*線の太さ*/
+            height: 0.2em;/*線の太さ*/
             width: 25px;/*長さ*/
             border-radius: 3px;
             background: #555;
@@ -35,7 +35,7 @@
             &:before{
                 bottom: -8px;
                 position: absolute;
-                height: 0.2rem;/*線の太さ*/
+                height: 0.2em;/*線の太さ*/
                 width: 25px;/*長さ*/
                 border-radius: 3px;
                 background: #555;
@@ -46,7 +46,7 @@
             &:after{
                 bottom: -16px;
                 position: absolute;
-                height: 0.2rem;/*線の太さ*/
+                height: 0.2em;/*線の太さ*/
                 width: 25px;/*長さ*/
                 border-radius: 3px;
                 background: #555;
@@ -79,7 +79,8 @@
         right: 0;
         z-index: 9999;/*最前面に*/
         width: 90%; //小さい画面でも必ず閉じるための隙間を作る。
-        max-width: 330px;/*最大幅（調整してください）*/
+        width: 600px;/*最大幅（調整してください）*/
+        max-width: 80%;
         height: 100%;
         background: #fff;/*背景色*/
         transition: .3s ease-in-out;/*滑らかに表示*/

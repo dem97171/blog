@@ -5,6 +5,7 @@ $side-width: 320px;
 .l-header{
     width: 100%;
     // background-color: #d18e8e;
+    z-index: 1;
     .l-header-wrapper{
         max-width: $width;
         padding: 0px 10px;
@@ -15,8 +16,7 @@ $side-width: 320px;
 
 .l-main{
     width: 100%;
-    background-color: #eeedeb;
-    box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 0.54);
+    background-color: #f5f5f5;
     position: relative;
     .l-main-wrapper{
         // position: relative;
@@ -34,7 +34,7 @@ $side-width: 320px;
             .l-main-content_wrapper{
                 background-color: #ffffff;
                 border-radius: 4px;
-                box-shadow: 0px 1px 8px 1px rgba(0,0,0,0.54);
+                box-shadow: 0px 1px 8px 1px rgba(146, 146, 146, 0.54);
                 margin-right: 30px;
             }
         }
@@ -43,8 +43,10 @@ $side-width: 320px;
             // top: 0px;
             // right: 0px;
             // overflow: scroll;
+            margin-top: 20px;
             min-width: $side-width;
             width: $side-width;
+            z-index: 2;
         } 
     }
 }
@@ -64,13 +66,13 @@ $side-width: 320px;
                 width: 100%;
                 max-width: $width;
                 margin: 40px auto;
-                max-width: 950px;
+                // max-width: 950px;
                 // border-right: solid $side-width $sidebar-color;
                 .l-main-content_wrapper{
                     background-color: #ffffff;
                     border-radius: 4px;
-                    box-shadow: 0px 1px 8px 1px rgba(0,0,0,0.54);
-                    margin-right: 30px;
+                    box-shadow: 0px 1px 8px 1px rgba(146, 146, 146, 0.54);
+                    margin-right: 0px;
                 }
             }
             .l-main-sidebar{

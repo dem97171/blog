@@ -4,8 +4,8 @@
         position: relative;
         min-height: 70px;
         padding: 10px;
-        // margin-bottom: 10px;
-        // border: 2px solid #ffffff;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #dadada;
         transition-duration: 0.15s;
         &:hover{
             $linkColor: #14a9e4;
