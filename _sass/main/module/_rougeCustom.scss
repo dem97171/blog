@@ -26,3 +26,9 @@ code{
         }
     }
 }
+
+@media screen and (max-width: 1340px) {
+    .highlighter-rouge{
+        font-size: 1em;    // なんでremの大きさが共通じゃないのかわかんない
+    }
+}

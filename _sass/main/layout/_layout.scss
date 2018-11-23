@@ -9,7 +9,8 @@ $side-width: 320px;
     .l-header-wrapper{
         max-width: $width;
         padding: 0px 10px;
-        margin: 0px auto;
+        margin: 0px auto 0px auto;
+        margin-right: 6rem;
         text-align: center;
     }
 }
